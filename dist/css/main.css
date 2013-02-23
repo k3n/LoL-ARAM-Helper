@@ -1,0 +1,56 @@
+
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.aram {
+	width: 315px;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	margin: 0;
+	margin-left: 6px;
+	background-color: #202328;
+	font-variant: small-caps;
+}
+
+.hero-unit {
+	margin: 0;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	width: 315px;
+}
+
+button {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.champ {
+	padding-left: 4px;
+	display: inline-block;
+	font-weight: bold;
+	width: 100px;
+}
+
+div.row:nth-child(odd) {
+	background-color: #272B30;
+}
+
+div.row:nth-child(even) {
+
+}
+
+input[name="search"] {
+	width: 50px;
+}
+
+.row {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
