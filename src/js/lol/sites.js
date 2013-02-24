@@ -9,7 +9,7 @@ define(['./riot'], function(riot) {
 
     Site.prototype = {
         fixName: function fixName(c, r) {
-            return c.replace(/\W/, (r || '')).toLowerCase();
+            return c.replace(/\W/g, (r || '')).toLowerCase();
         }
     };
 
@@ -28,6 +28,13 @@ define(['./riot'], function(riot) {
 
         LeagueOfLegends: new Site('LeagueOfLegends.com', 'LoL', function toUrl(c) {
             return 'http://na.' + this.url + '/champions/' + riot.champs[this.fixName(c)].url;
+        }),
+
+        LoLWiki: new Site('LeagueOfLegends.Wikia.com', 'Wiki', function toUrl(c) {            
+            return 'http://' + this.url + '/wiki/' + this.fixName(c, function(match) {
+                // replace ' with %27, spaces with _, and ignore .
+                return (match === "'" && '%27') || (match === ' ' && '_') || match;
+            });
         })
     };
 
