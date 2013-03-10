@@ -261,6 +261,10 @@ define({
             name: "Poppy",
             url: "78/poppy_the_iron_ambassador"
         },
+        quinn: {
+            name: "Quinn",
+            url: ""
+        },
         rammus: {
             name: "Rammus",
             url: "33/rammus_the_armordillo"
