@@ -1,33 +1,31 @@
-// node ./node_modules/requirejs/bin/r.js -o build-config.js
-
 (function(){
 
-	var config = {
-	    baseUrl: '.',
-	    paths: {
-	        jquery: 'components/jquery/jquery'
-	    },
-	    include: ['js/app'],
-	    name: 'components/almond/almond',
-	    out: '../dist/js/app.min.js'
+	var cfg = {
+		debug: true,
+		out: {
+			dir: '../dist/',
+			js: 'js/app.min.js',
+			html: 'index.html',
+			tpl: 'tpl/index.tpl'
+		},
+		r_js: {
+		    baseUrl: '.',
+		    paths: {
+		        jquery: 'components/jquery/jquery'
+		    },
+		    include: ['js/run'],
+		    name: 'components/almond/almond',
+		    out: ''
+		},
+		scriptTags: {
+		}
 	};
 
-	var fs = require('fs'),
-		requirejs = require('requirejs');
+	cfg.r_js.out = cfg.out.dir + cfg.out.js;
 
-	// config = JSON.parse(fs.readFileSync('./config.js', 'utf8'));
+	var Builder = require('./builder'), 
+		builder = new Builder(cfg);
 
-	requirejs.optimize(config, function (buildResponse) {
-	    //buildResponse is just a text output of the modules
-	    //included. Load the built file for the contents.
-	    //Use config.out to get the optimized file contents.
-	    var contents = fs.readFileSync(config.out, 'utf8');
-	}, function(err) {
-	    //optimization err callback
-	    if (err) {
-	    	console.log(err);
-	    	throw err;
-	    }
-	});
+	builder.build();
 
 })();

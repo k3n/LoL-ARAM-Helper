@@ -22,6 +22,10 @@ define(['./riot'], function(riot) {
             return 'http://' + this.url + '/guides.php?champ=' + this.fixName(c);
         }),
 
+        ProBuilds: new Site('ProBuilds.net', 'PB', function toUrl(c) {
+            return 'http://' + this.url + '/champions/' + this.fixName(c);
+        }),
+
         LeagueCraft: new Site('LeagueCraft.com', 'LC', function toUrl(c) {
             return 'http://' + this.url + '/strategies/guides/' + this.fixName(c, '-') + '-guides/?sort=Rating_DESC';
         }),

@@ -1,6 +1,13 @@
-/*global define:false, window:false, document:false, $:false */
+/*global define:false, window:false, document:false, */
 /*jshint curly:true, eqeqeq:true, immed:true, latedef:true, newcap:true, noarg:true, sub:true, undef:true, unused:false, node:true */
-define(['./lol/riot', './lol/sites'], function(riot, sites){
+/**
+ * k3n's ARAM helper.
+ * 
+ * I don't hold copyright to anything.
+ *
+ * https://github.com/k3n/LoL-ARAM-Helper
+ */
+define(['jquery', './lol/riot', './lol/sites'], function($, riot, sites){
     "use strict";
 
     function App(sel) {

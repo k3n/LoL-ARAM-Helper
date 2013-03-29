@@ -36,7 +36,7 @@
                         <li><a href="https://github.com/k3n/LoL-ARAM-Helper/wiki/Auras-and-Actives">Auras & Actives</a></li>
                     </ul>
                     <ul class="nav">
-                        <li><a href="http://www.reddit.com/r/leagueoflegends/comments/1b6lxe/some_useful_lol_websites_that_everyone_should/">Useful LoL sites</a></li>
+                        <li><a href="http://www.reddit.com/r/leagueoflegends/comments/1b6lxe/some_useful_lol_websites_that_everyone_should/">Useful LoL Sites</a></li>
                     </ul>
                     <ul class="nav">
                         <li><a href="http://www.reddit.com/r/lolaram">r/LoLARAM</a></li>
@@ -55,7 +55,7 @@
 			<input name="search" type="text" placeholder="Filter…" />
         </div>
         
-        <script src="js/app.min.js"></script>
+        {{{scriptTags}}}
 
     </body>
 </html>
