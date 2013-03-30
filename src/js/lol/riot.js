@@ -429,6 +429,10 @@ define({
             name: "Yorick",
             url: "83/yorick_the_gravedigger"
         },
+        zac: {
+            name: "Zac",
+            url: ""
+        },
         zed: {
             name: "Zed",
             url: "238/zed_the_master_of_shadows"
